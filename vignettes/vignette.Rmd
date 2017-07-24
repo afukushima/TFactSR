@@ -1,0 +1,67 @@
+---
+title: "TFactSR: Enrichment Approach to Predict Which Transcription Factors Are Regulated"
+author:
+- name: Atsushi Fukushima
+  affiliation: RIKEN Center for Sustainable Resource Science
+  email: afukushima@gmail.com
+date: "`r Sys.Date()`"
+output:
+  BiocStyle::html_document2:
+    toc_float: true
+  BiocStyle::pdf_document2: default
+package: TFactSR
+abstract: |
+  Instructions for the TFactSR package.
+vignette: >
+  %\VignetteIndexEntry{TFactSR instructions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+  [TFactS](http://www.tfacts.org/) is to predict which are the transcription factors (TFs), regulated in a biological condition based on lists of differentially expressed genes (DEGs) obtained from transcriptome experiments. This package is based on the TFactS concept and expands it. It allows users to performe TFactS-like enrichment approach. The package can import and use the original catalogue file from the [TFactS website](http://www.tfacts.org/) as well as users' defined catalogues of interest that are not supported by TFactS (e.g., Arabidopsis).
+
+  This vignette is largely based on the [TFactS manual](http://www.tfacts.org/TFactS-new/TFactS-v2/index1.html). For the details about TFactS, please also see [the original paper by Essaghir et al. (2010)](https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkq149).
+
+# Prerequisites
+The TFactSR package requires (1) a list of DEGs and (2) a catalogue of interest. For Arabidopsis, we prepared the catalogue based on [AtRegNet](http://arabidopsis.med.ohio-state.edu/) and [ATRM](http://atrm.cbi.pku.edu.cn/). For human data, the package can do the calculation using default settings. 
+
+The Supported organisms by the original TFactS are human, Rat and mouse genes. As you can see below,  you can perform an enrichment analysis which TFs are regulated if you have a list of DEGs and your catalogue. 
+
+# Getting started
+
+For human/rat/mouse data, we can do the TFactS analysis as follows.
+
+```{R the original TFactS}
+library(TFactSR)
+data(DEGs)
+data(catalog)
+
+tftg <- extractTFTG(DEGs, catalog)
+TFs <- tftg$TFs
+all.targets <- tftg$all.targets
+
+res <- TFactSR(DEGs, catalog, TFs, all.targets)
+head(res)
+```
+
+Using the option "TF.col" and "TF.col", we can specify the target column of your catalogue dataset. Carefully you have to choose the TF-target relationships as follows.
+
+```{R Arabidopsis}
+data(AtCatalog)
+data(GenesUp_SH1H)
+
+d <- extractTFTG(GenesUp_SH1H, AtCatalog,
+                     TF.col = "TF",
+                     TG.col = "target.genes")
+
+res <- TFactSR(GenesUp_SH1H, AtCatalog, d$TFs, d$all.targets, TF.col = "TF")
+head(res)
+```
+
+
+
+# References
+1. Essaghir A, Toffalini F, Knoops L, Kallin A, van Helden J, Demoulin JB: Transcription factor regulation can be accurately predicted from the presence of target gene signatures in microarray gene expression data. [Nucleic Acids Res. 2010 Jun 1;38(11):e120](https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkq149).
+2. Essaghir A, Demoulin JB: A Minimal Connected Network of Transcription Factors Regulated in Human Tumors and Its Application to the Quest for Universal Cancer Biomarkers. Plos One 7 (6), 2012, [e39666](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0039666).
+
