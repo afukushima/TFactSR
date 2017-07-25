@@ -22,13 +22,34 @@ vignette: |
 
   This vignette is largely based on the [TFactS manual](http://www.tfacts.org/TFactS-new/TFactS-v2/index1.html). For the details about TFactS, please also see [the original paper by Essaghir et al. (2010)](https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkq149).
   
-  The current package assumes the Sign-Less catalogue, i.e. it does not contain any regulation type information (up- or down-regulation). TFactSR compares the list of query DEGs (up and/or down) with a catalogue of target gene signatures. The core algorithm is based on Fisher's exact test using a contingency table as follows:
+  Briefly, the current package assumes the Sign-Less catalogue, i.e. it does not contain any regulation type information (up- or down-regulation). TFactSR compares the list of query DEGs (up and/or down) with a catalogue of target gene signatures. The core algorithm is based on Fisher's exact test using a contingency table as follows:
 
     - m is the number of target genes annotated for the TF under consideration
     - n is the number of query genes
     - N is the number of regulations in the catalog
     - k is the number of query genes that are annotated as regulated by TF
      (i.e., the intersection between the query and the TF signature)
+
+$$ Pval = \left(
+            \begin{array}{c}
+              m \\
+              i
+            \end{array}
+          \right)
+          \left(
+            \begin{array}{c}
+              N-m \\
+              n-i
+            \end{array}
+          \right)
+/
+          \left(
+          \begin{array}{c}
+              N \\
+              n
+          \end{array}
+          \right)
+$$        
 
 
 
