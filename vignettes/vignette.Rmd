@@ -20,15 +20,26 @@ vignette: |
 # Introduction
   [TFactS](http://www.tfacts.org/) is to predict which are the transcription factors (TFs), regulated in a biological condition based on lists of differentially expressed genes (DEGs) obtained from transcriptome experiments. This package is based on the TFactS concept and expands it. It allows users to performe TFactS-like enrichment approach. The package can import and use the original catalogue file from the [TFactS website](http://www.tfacts.org/) as well as users' defined catalogues of interest that are not supported by TFactS (e.g., Arabidopsis).
 
+# Methods - Statistical significance
   This vignette is largely based on the [TFactS manual](http://www.tfacts.org/TFactS-new/TFactS-v2/index1.html). For the details about TFactS, please also see [the original paper by Essaghir et al. (2010)](https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkq149).
   
+
+## P-value
   Briefly, the current package assumes the Sign-Less catalogue, i.e. it does not contain any regulation type information (up- or down-regulation). TFactSR compares the list of query DEGs (up and/or down) with a catalogue of target gene signatures. The core algorithm is based on Fisher's exact test using a contingency table as follows:
 
-    - m is the number of target genes annotated for the TF under consideration
-    - n is the number of query genes
-    - N is the number of regulations in the catalog
-    - k is the number of query genes that are annotated as regulated by TF
-     (i.e., the intersection between the query and the TF signature)
+
+TF                 | DEGs: Present   | DEGs: Absent    | Total
+------------------ | --------------- | --------------- | -----
+Catalogue: Present | *k*             | *m - k*         | *m*
+Catalogue: Absent  | *n - k*         | *N + k - n - m* | *N - m*
+Total              | *n*             | *N - n*         | *N*
+
+
+- $m$ is the number of target genes annotated for the TF under consideration
+- $n$ is the number of query genes
+- $N$ is the number of regulations in the catalog
+- $k$ is the number of query genes that are annotated as regulated by TF (i.e., the intersection between the query and the TF signature)
+
 
 $$ Pval = \left(
             \begin{array}{c}
@@ -50,6 +61,23 @@ $$ Pval = \left(
           \end{array}
           \right)
 $$        
+
+
+## E-value
+E-value is the number of tests done ($T$) times the p-value.
+
+$Eval = pval \times T$
+
+
+## BH-corrected P-value
+Benjamini and Hochberg false discovery rate (FDR) controlling method: this is based on Benjamini and Hochberg (1995) and is calculated using p.adjust() function. Note that the current TFactSR package does not use Q-value (Storey 2003) under default settings.
+
+
+## Random Control (RC)
+RC is the percentage of which a TF is called significant under a certain E-value threshold after a random simulation of user lists in specified number of repetitions:
+
+$$ RD_{(TF)} = \frac{\#\left\{ Eval(TF) \leq \lambda \right\} \times 100} { \#\left\{rep\right\} } $$
+
 
 
 

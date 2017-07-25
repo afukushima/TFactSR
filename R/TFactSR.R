@@ -35,6 +35,8 @@ TFactSR <- function(DEGs, catalog, TFs, all.targets, Q.value = FALSE,
   if (!is.logical(Q.value)) stop("Q.value must be a logical object.")
   if (!is.character(TFs)) stop("TFs must be a character.")
   if (!length(TFs)>0) stop("The number of TFs must be >0.")
+  if (!length(grep(TF.col, colnames(catalog)))>0)
+    stop("TF.col must specify one column of the catalogue.")
 
   ## enrichment test
   df <- calculateEnrichmentTest(DEGs, catalog, TFs, TF.col = TF.col)
