@@ -98,7 +98,7 @@ tftg <- extractTFTG(DEGs, catalog)
 TFs <- tftg$TFs
 all.targets <- tftg$all.targets
 
-res <- TFactSR(DEGs, catalog, TFs, all.targets)
+res <- calculateTFactS(DEGs, catalog, TFs, all.targets)
 head(res)
 ```
 
@@ -112,7 +112,7 @@ d <- extractTFTG(GenesUp_SH1H, AtCatalog,
                      TF.col = "TF",
                      TG.col = "target.genes")
 
-res <- TFactSR(GenesUp_SH1H, AtCatalog, d$TFs, d$all.targets, TF.col = "TF")
+res <- calculateTFactS(GenesUp_SH1H, AtCatalog, d$TFs, d$all.targets, TF.col = "TF")
 head(res)
 ```
 
