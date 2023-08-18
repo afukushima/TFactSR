@@ -1,0 +1,12 @@
+^\.github$
+^\.git$
+^.*\.Rproj$
+^\.Rproj\.user$
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+.Rbuildignore
+/doc/
+/Meta/
+.Rproj.user
