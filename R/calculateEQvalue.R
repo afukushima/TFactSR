@@ -8,6 +8,7 @@
 ##' @param TFs a character vector of transcription factor
 ##' @return data.frame
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
+##' @export
 ##' @examples
 ##' data(catalog)
 ##'
@@ -37,6 +38,7 @@ calculateEvalue <- function(df, TFs) {
 ##' @param lambda a vector of the lambda values utilized to obtain pi0.lambda
 ##' @return data.frame
 ##' @references Storey JD, The Annals of Statistics 31:2013-2035 (2003)
+##' @export
 ##' @examples
 ##' data(example.df)
 ##' p.value <- example.df$p.value
@@ -59,6 +61,7 @@ calculateQvalue <- function(df, lambda = seq(0.05, 0.5, 0.01)) {
 ##' @param df a data frame containng p-values
 ##' @return data.frame
 ##' @references Benjamini Y and Hochberg Y, J Roy Stat Soc B 57: 289?300 (1995)
+##' @export
 ##' @examples
 ##' p.value <- runif(10)/(1:10)
 ##' df <- data.frame(p.value = p.value)

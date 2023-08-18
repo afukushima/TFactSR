@@ -10,6 +10,7 @@
 ##' @param TF.col the name of the column that contains the TF names
 ##' @return data.frame
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
+##' @export
 ##' @examples
 ##' data(DEGs)
 ##' data(catalog)
@@ -66,6 +67,7 @@ calculateEnrichmentTest <-
 ##' @param nRep number of random selections (default: 100)
 ##' @return data.frame
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
+##' @export
 ##' @examples
 ##' data(example.df)
 ##' data(catalog)
@@ -134,6 +136,7 @@ calculateRC <-
 ##' @param nRep number of random selections (default: 100)
 ##' @return data.frame
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
+##' @export
 ##' @examples
 ##' data(example.df)
 ##' data(catalog)

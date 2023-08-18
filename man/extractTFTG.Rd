@@ -4,8 +4,12 @@
 \alias{extractTFTG}
 \title{extracts transcription factor (TF) and target gene (TG) information}
 \usage{
-extractTFTG(DEGs, catalog, TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.",
-  TG.col = "Target.gene..OFFICIAL_GENE_NAME.")
+extractTFTG(
+  DEGs,
+  catalog,
+  TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.",
+  TG.col = "Target.gene..OFFICIAL_GENE_NAME."
+)
 }
 \arguments{
 \item{DEGs}{a character vector of DEGs (differentially expressed genes)}

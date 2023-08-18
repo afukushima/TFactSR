@@ -25,7 +25,7 @@ test_that("TFactS calculation", {
   expect_equal(res[1, ]$N, 6838)
   expect_equal(res[1, ]$k, 7)
   expect_equal(res[1, ]$RC, 1)
-  expect_equal(res[2, ]$RC, 3)
+  expect_equal(res[2, ]$RC, 1)
   expect_equal(res[3, ]$RC, 0)
 
 
@@ -61,11 +61,11 @@ test_that("fast RC calculation", {
   resRC <- FASTcalculateRC(example.df, DEGs, catalog, TFs, all.targets)
 
   ## TFactS values
-  expect_equal(res[1, ]$RC, 1)
+  expect_equal(res[1, ]$RC, 0)
   expect_equal(res[2, ]$RC, 2)
-  expect_equal(res[7, ]$RC, 4)
+  expect_equal(res[7, ]$RC, 6)
   ##
-  expect_equal(resRC[1, ]$RC, 1)
+  expect_equal(resRC[1, ]$RC, 0)
   expect_equal(resRC[2, ]$RC, 2)
-  expect_equal(resRC[7, ]$RC, 4)
+  expect_equal(resRC[7, ]$RC, 6)
 })

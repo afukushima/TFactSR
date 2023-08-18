@@ -4,8 +4,16 @@
 \alias{FASTcalculateRC}
 \title{calculates Random Control (RC) fastly?}
 \usage{
-FASTcalculateRC(df, DEGs, catalog, TFs, all.targets,
-  TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.", lambda = 0.05, nRep = 100)
+FASTcalculateRC(
+  df,
+  DEGs,
+  catalog,
+  TFs,
+  all.targets,
+  TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.",
+  lambda = 0.05,
+  nRep = 100
+)
 }
 \arguments{
 \item{df}{a data frame containng p-values}

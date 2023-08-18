@@ -4,8 +4,12 @@
 \alias{calculateEnrichmentTest}
 \title{performs enrichment analysis}
 \usage{
-calculateEnrichmentTest(DEGs, catalog, TFs,
-  TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.")
+calculateEnrichmentTest(
+  DEGs,
+  catalog,
+  TFs,
+  TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME."
+)
 }
 \arguments{
 \item{DEGs}{a character vector of DEGs (differentially expressed genes)}

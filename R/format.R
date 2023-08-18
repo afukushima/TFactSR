@@ -7,6 +7,7 @@
 ##'
 ##' @param list a list of the result of enrichment test (ncol = 6)
 ##' @return data.frame
+##' @export
 ##' @examples
 ##' data(example.list)
 ##' res <- formatET(example.list)
@@ -36,6 +37,7 @@ formatET <- function(list) {
 ##' @param list a list of the result of RC (ncol = 2)
 ##' @param nRep the number of random selections (negative control)
 ##' @return data.frame
+##' @export
 ##' @examples
 ##' data(example.df)
 ##' data(example.list)
@@ -66,6 +68,7 @@ formatRC <- function(df, list, nRep) {
 ##' @param TF.col the name of the column that contains the TF names
 ##' @param TG.col the name of the column that contains the TG names
 ##' @return list
+##' @export
 ##' @examples
 ##' data(DEGs)
 ##' data(catalog)

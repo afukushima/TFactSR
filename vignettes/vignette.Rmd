@@ -5,9 +5,8 @@ author:
   affiliation: RIKEN Center for Sustainable Resource Science
   email: afukushima@gmail.com
 output:
-  BiocStyle::html_document2:
+  BiocStyle::html_document:
     toc_float: true
-  BiocStyle::pdf_document2: default
 package: TFactSR
 abstract: |
   Instructions for the TFactSR package.

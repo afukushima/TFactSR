@@ -3,7 +3,6 @@
 \docType{package}
 \name{TFactSR}
 \alias{TFactSR}
-\alias{TFactSR-package}
 \title{TFactSR: A package for identifying critical transcription factors.}
 \description{
 TFactS is to predict which are the transcription factors (TFs), regulated

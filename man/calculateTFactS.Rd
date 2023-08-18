@@ -4,9 +4,17 @@
 \alias{calculateTFactS}
 \title{calculates TFactS}
 \usage{
-calculateTFactS(DEGs, catalog, TFs, all.targets, Q.value = FALSE,
-  lambda1 = seq(0.05, 0.5, 0.01), lambda2 = 0.05, nRep = 100,
-  TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.")
+calculateTFactS(
+  DEGs,
+  catalog,
+  TFs,
+  all.targets,
+  Q.value = FALSE,
+  lambda1 = seq(0.05, 0.5, 0.01),
+  lambda2 = 0.05,
+  nRep = 100,
+  TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME."
+)
 }
 \arguments{
 \item{DEGs}{a character vector of DEGs (differentially expressed genes)}
