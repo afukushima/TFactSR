@@ -4,6 +4,9 @@
 \name{AtCatalog}
 \alias{AtCatalog}
 \title{A list of TF-target genes (TG) in Arabidopsis thaliana.}
+\value{
+None
+}
 \description{
 A catalogue of annotated target genes in Arabidopsis thaliana
 }

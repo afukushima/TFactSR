@@ -4,6 +4,9 @@
 \name{example.df}
 \alias{example.df}
 \title{An example result of enrichment analysis}
+\value{
+None
+}
 \description{
 An example result of enrichment analysis
 }

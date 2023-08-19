@@ -4,6 +4,9 @@
 \name{catalog}
 \alias{catalog}
 \title{A list of TF-target genes (TG) in TFactS.}
+\value{
+None
+}
 \description{
 A catalogue of annotated target genes based on TFactS.
 }

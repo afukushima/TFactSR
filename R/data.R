@@ -9,7 +9,7 @@
 ##' @docType data
 ##' @aliases catalog
 ##' @title A list of TF-target genes (TG) in TFactS.
-##'
+##' @return None
 ##' @keywords datasets
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
 ##' @author Atsushi Fukushima
@@ -25,7 +25,7 @@ NULL
 ##' @docType data
 ##' @aliases DEGs
 ##' @title An example list of DEGs from DEMO data in TFactS.
-##'
+##' @return None
 ##' @keywords datasets
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
 ##' @author Atsushi Fukushima
@@ -40,7 +40,7 @@ NULL
 ##' @docType data
 ##' @aliases DEGs39
 ##' @title An example list of 39 DEGs from DEMO data in TFactS.
-##'
+##' @return None
 ##' @keywords datasets
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
 ##' @author Atsushi Fukushima
@@ -55,7 +55,7 @@ NULL
 ##' @docType data
 ##' @aliases example.df
 ##' @title An example result of enrichment analysis
-##'
+##' @return None
 ##' @keywords datasets
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
 ##' @author Atsushi Fukushima
@@ -70,7 +70,7 @@ NULL
 ##' @docType data
 ##' @aliases example.list
 ##' @title An example list of result of enrichment analysis
-##'
+##' @return None
 ##' @keywords datasets
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
 ##' @author Atsushi Fukushima
@@ -90,7 +90,7 @@ NULL
 ##' @docType data
 ##' @aliases AtCatalog
 ##' @title A list of TF-target genes (TG) in Arabidopsis thaliana.
-##'
+##' @return None
 ##' @keywords datasets
 ##' @references Yilmaz A et al. NAR 39:D1118-1122 (2011)
 ##' @author Atsushi Fukushima
@@ -108,7 +108,7 @@ NULL
 ##' @docType data
 ##' @aliases GenesUp_SH1H
 ##' @title An example list of 74 DEGs from AtGenExpress stress dataset.
-##'
+##' @return None
 ##' @keywords datasets
 ##' @references Killian J et al. Plant J. 2007 Apr;50(2):347-363.
 ##' @author Atsushi Fukushima

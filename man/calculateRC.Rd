@@ -60,6 +60,7 @@ m is the number of target genes annotated for the TF
 under consideration
 n is the number of query genes
 N is the number of regulations in the catalog
-k is the number of query genes that are annotated as regulated by TF
-(i.e., the intersection between the query and the TF signature)
+k is the number of query genes that are annotated as
+regulated by TF (i.e., the intersection between the
+query and the TF signature)
 }

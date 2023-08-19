@@ -4,6 +4,9 @@
 \name{DEGs}
 \alias{DEGs}
 \title{An example list of DEGs from DEMO data in TFactS.}
+\value{
+None
+}
 \description{
 An example list of differentially expressed genes (DEGs).
 }

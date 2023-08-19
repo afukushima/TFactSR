@@ -4,6 +4,9 @@
 \name{GenesUp_SH1H}
 \alias{GenesUp_SH1H}
 \title{An example list of 74 DEGs from AtGenExpress stress dataset.}
+\value{
+None
+}
 \description{
 A list of 74 differentially expressed genes (DEGs) from AtGenExpress
 }

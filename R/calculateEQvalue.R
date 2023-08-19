@@ -55,8 +55,8 @@ calculateQvalue <- function(df, lambda = seq(0.05, 0.5, 0.01)) {
         stop("catalog must be a data.rame.")
     qobj <-
         qvalue::qvalue(p = df$p.value,
-                       lambda = lambda,
-                       pfdr = TRUE)
+                    lambda = lambda,
+                    pfdr = TRUE)
     df.new <- cbind(df, q.value = qobj$qvalues)
     return(df.new)
 }

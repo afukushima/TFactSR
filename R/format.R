@@ -104,10 +104,13 @@ extractTFTG <- function(DEGs,
     }
     else {
         subcatalog <- catalog[overlapped,]
-        TFs <- unique(as.character(subcatalog[, grep(TF.col, colnames(subcatalog))]))
+        TFs <- unique(as.character(
+            subcatalog[, grep(TF.col, colnames(subcatalog))]))
     }
 
-    all.targets <- unique(as.character(catalog[, grep(TG.col, colnames(catalog))]))
+    all.targets <- unique(
+        as.character(catalog[, grep(TG.col, colnames(catalog))])
+        )
     res <- list(TFs = TFs, all.targets = all.targets)
     return(res)
 }

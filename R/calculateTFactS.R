@@ -27,14 +27,14 @@
 ##' @author Atsushi Fukushima
 calculateTFactS <-
     function(DEGs,
-             catalog,
-             TFs,
-             all.targets,
-             Q.value = FALSE,
-             lambda1 = seq(0.05, 0.5, 0.01),
-             lambda2 = 0.05,
-             nRep = 100,
-             TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.") {
+            catalog,
+            TFs,
+            all.targets,
+            Q.value = FALSE,
+            lambda1 = seq(0.05, 0.5, 0.01),
+            lambda2 = 0.05,
+            nRep = 100,
+            TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.") {
         if (!is.character(DEGs))
             stop("DEGs must be a character.")
         if (!is.data.frame(catalog))

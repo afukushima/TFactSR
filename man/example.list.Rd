@@ -4,6 +4,9 @@
 \name{example.list}
 \alias{example.list}
 \title{An example list of result of enrichment analysis}
+\value{
+None
+}
 \description{
 An example list of result of enrichment analysis
 }
