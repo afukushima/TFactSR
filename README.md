@@ -1,0 +1,14 @@
+# TFactSR
+
+# Installation
+install.packages("devtools")
+
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("qvalue")
+
+devtools::install_github("afukushima/TFactSR", build_vignettes = TRUE)
+
+# Tutorial
+https://afukushima.github.io/TFactSR/
