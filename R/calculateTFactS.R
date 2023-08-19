@@ -25,31 +25,51 @@
 ##' res <- calculateTFactS(DEGs, catalog, TFs, all.targets)
 ##'
 ##' @author Atsushi Fukushima
-calculateTFactS <- function(DEGs, catalog, TFs, all.targets, Q.value = FALSE,
-                    lambda1 = seq(0.05, 0.5, 0.01), lambda2 = 0.05,
-                    nRep = 100, TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.") {
-  if (!is.character(DEGs)) stop("DEGs must be a character.")
-  if (!is.data.frame(catalog)) stop("catalog must be a data.rame.")
-  if (!is.character(all.targets))
-    stop("all.targets must be a character vector.")
-  if (!is.logical(Q.value)) stop("Q.value must be a logical object.")
-  if (!is.character(TFs)) stop("TFs must be a character.")
-  if (!length(TFs)>0) stop("The number of TFs must be >0.")
-  if (!length(grep(TF.col, colnames(catalog)))>0)
-    stop("TF.col must specify one column of the catalogue.")
+calculateTFactS <-
+    function(DEGs,
+             catalog,
+             TFs,
+             all.targets,
+             Q.value = FALSE,
+             lambda1 = seq(0.05, 0.5, 0.01),
+             lambda2 = 0.05,
+             nRep = 100,
+             TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.") {
+        if (!is.character(DEGs))
+            stop("DEGs must be a character.")
+        if (!is.data.frame(catalog))
+            stop("catalog must be a data.rame.")
+        if (!is.character(all.targets))
+            stop("all.targets must be a character vector.")
+        if (!is.logical(Q.value))
+            stop("Q.value must be a logical object.")
+        if (!is.character(TFs))
+            stop("TFs must be a character.")
+        if (!length(TFs) > 0)
+            stop("The number of TFs must be >0.")
+        if (!length(grep(TF.col, colnames(catalog))) > 0)
+            stop("TF.col must specify one column of the catalogue.")
 
-  ## enrichment test
-  df <- calculateEnrichmentTest(DEGs, catalog, TFs, TF.col = TF.col)
-  ## calculate E-values
-  df <- calculateEvalue(df, TFs)
-  ## calculate FDR control by BH
-  df <- calculateFDRBH(df)
-  ## calculate Q-value by Storey
-  if (Q.value) {
-    df <- calculateQvalue(df, lambda = lambda1)
-  }
-  ## calculate Random Control (RC)
-  df <- calculateRC(df, DEGs, catalog, TFs, all.targets,
-                    TF.col = TF.col, lambda = lambda2, nRep = nRep)
-  return(df)
-}
+        ## enrichment test
+        df <- calculateEnrichmentTest(DEGs, catalog, TFs, TF.col = TF.col)
+        ## calculate E-values
+        df <- calculateEvalue(df, TFs)
+        ## calculate FDR control by BH
+        df <- calculateFDRBH(df)
+        ## calculate Q-value by Storey
+        if (Q.value) {
+            df <- calculateQvalue(df, lambda = lambda1)
+        }
+        ## calculate Random Control (RC)
+        df <- calculateRC(
+            df,
+            DEGs,
+            catalog,
+            TFs,
+            all.targets,
+            TF.col = TF.col,
+            lambda = lambda2,
+            nRep = nRep
+        )
+        return(df)
+    }
