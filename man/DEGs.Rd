@@ -8,10 +8,11 @@
 An example list of differentially expressed genes (DEGs).
 }
 \details{
-This was from DEMO data in TFactS (http://www.tfacts.org/). The list corresponds to 18 up-regulated genes.
+This was from DEMO data in TFactS (http://www.tfacts.org/).
+The list corresponds to 18 up-regulated genes.
 }
 \references{
-Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120. doi: 10.1093/nar/gkq149.
+Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
 }
 \author{
 Atsushi Fukushima

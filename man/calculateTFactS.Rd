@@ -25,7 +25,7 @@ calculateTFactS(
 
 \item{all.targets}{a character vector of all target genes}
 
-\item{Q.value}{logical. If it is TRUE, Q.value calculation is performed by Storey method.}
+\item{Q.value}{logical. If it is TRUE, Q.value by Storey method.}
 
 \item{lambda1}{a vector of the lambda values utilized to obtain pi0.lambda}
 

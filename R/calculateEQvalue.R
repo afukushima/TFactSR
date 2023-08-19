@@ -10,6 +10,7 @@
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
 ##' @export
 ##' @examples
+##' data(DEGs)
 ##' data(catalog)
 ##'
 ##' tftg <- extractTFTG(DEGs, catalog)

@@ -10,10 +10,11 @@ A catalogue of annotated target genes based on TFactS.
 \details{
 This was downloaded from TFactS (http://www.tfacts.org/).
 
-The catalogues version is 2 (http://www.tfacts.org/TFactS-new/TFactS-v2/tfacts/data/Catalogues.xls).
+The catalogues version is 2
+(http://www.tfacts.org/TFactS-new/TFactS-v2/tfacts/data/Catalogues.xls).
 }
 \references{
-Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120. doi: 10.1093/nar/gkq149.
+Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
 }
 \author{
 Atsushi Fukushima

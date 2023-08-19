@@ -5,17 +5,19 @@
 \alias{AtCatalog}
 \title{A list of TF-target genes (TG) in Arabidopsis thaliana.}
 \description{
-A catalogue of annotated target genes in Arabidopsis thaliana based on AtRegNet and ATRM.
+A catalogue of annotated target genes in Arabidopsis thaliana
 }
 \details{
 The original regulatory network datasets were downloaded from AtRegNet
-- AGRIS Arabidopsis (http://arabidopsis.med.ohio-state.edu/moreNetwork.html)
-and ATRM (http://atrm.cbi.pku.edu.cn/), respectively. Then we integrated them based on AGI code.
+- AGRIS Arabidopsis
+(http://arabidopsis.med.ohio-state.edu/moreNetwork.html)
+and ATRM (http://atrm.cbi.pku.edu.cn/), respectively. Then we integrated
+them based on AGI code.
 
 The catalogues version is 0.0.1.
 }
 \references{
-Yilmaz A et al. NAR 39:D1118-1122 (2011); Jin JP et al. Mol Biol Evol 32:1767-1773 (2015)
+Yilmaz A et al. NAR 39:D1118-1122 (2011)
 }
 \author{
 Atsushi Fukushima

@@ -94,7 +94,7 @@ calculateRC <-
       )
     ## random sampling
     sigCount <- 0
-    for(j in 1:nRep) {
+    for(j in seq_len(nRep)) {
       TF.targets <- sample(all.targets, length(TF.targets), replace = TRUE)
       ##' Definition:
       ##' m is the number of target genes annotated for the TF
@@ -109,8 +109,8 @@ calculateRC <-
       k <- length(intersect(TF.targets, DEGs))
       table <- matrix(c(k, n-k, m-k, N-m-n+k), nrow = 2)
       testRes <- stats::fisher.test(table, alternative = 'greater')
-      e.value = as.numeric(testRes$p.value) * length(TFs)
-      if (e.value <= lambda) sigCount = sigCount + 1
+      e.value <- as.numeric(testRes$p.value) * length(TFs)
+      if (e.value <= lambda) sigCount <- sigCount + 1
     }
     res.tmp <- list(i, sigCount = sigCount)
     return(res.tmp)

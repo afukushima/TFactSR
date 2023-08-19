@@ -11,7 +11,7 @@ An example result of enrichment analysis
 The size of data frame is 345 TFs and 6 columns.
 }
 \references{
-Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120. doi: 10.1093/nar/gkq149.
+Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
 }
 \author{
 Atsushi Fukushima

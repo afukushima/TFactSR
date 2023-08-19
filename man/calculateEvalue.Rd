@@ -18,6 +18,7 @@ data.frame
 This function calculates E-value based on .
 }
 \examples{
+data(DEGs)
 data(catalog)
 
 tftg <- extractTFTG(DEGs, catalog)

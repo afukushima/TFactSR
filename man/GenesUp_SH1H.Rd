@@ -5,17 +5,17 @@
 \alias{GenesUp_SH1H}
 \title{An example list of 74 DEGs from AtGenExpress stress dataset.}
 \description{
-A list of 74 differentially expressed genes (DEGs) from AtGenExpress Stress (UV-B).
+A list of 74 differentially expressed genes (DEGs) from AtGenExpress
 }
 \details{
-This was from DEMO data in the Supplemental data (Table S4. Genes regulated by UV-B light stress
-in roots and shoots; filename: TPJ_3052_sm_TabS4.xls) of the paper by Killian et al. TPJ (2008).
-
-The list corresponds to 74 genes up-regulated in roots and shoots 1 hnour after onset of UV-B
-stress treatment.
+This was from DEMO data in the Supplemental data (Table S4. Genes
+regulated by UV-B light stress in roots and shoots; filename:
+TPJ_3052_sm_TabS4.xls) of the paper by Killian et al. TPJ (2008).
+The list corresponds to 74 genes up-regulated in roots and shoots 1 hour
+after onset of UV-B stress treatment.
 }
 \references{
-Killian J et al. Plant J. 2007 Apr;50(2):347-363. doi: 10.1111/j.1365-313X.2007.03052.x
+Killian J et al. Plant J. 2007 Apr;50(2):347-363.
 }
 \author{
 Atsushi Fukushima

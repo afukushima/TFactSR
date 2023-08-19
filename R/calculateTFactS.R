@@ -6,7 +6,7 @@
 ##' @param catalog a data frame of TFactS catalog (ver. 2)
 ##' @param TFs a character vector of transcription factor
 ##' @param all.targets a character vector of all target genes
-##' @param Q.value logical. If it is TRUE, Q.value calculation is performed by Storey method.
+##' @param Q.value logical. If it is TRUE, Q.value by Storey method.
 ##' @param lambda1 a vector of the lambda values utilized to obtain pi0.lambda
 ##' @param lambda2 a user-specified threshold of E-value (default: 0.05)
 ##' @param nRep number of random selections (default: 100)
