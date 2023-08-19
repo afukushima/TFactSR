@@ -16,7 +16,7 @@ devtools::install_github("afukushima/TFactSR", build_vignettes = TRUE)
 # Tutorial
 --------------
 ```{R}
-browseVignettes("MSEAp")
+browseVignettes("TFactSR")
 ```
 
 or see https://afukushima.github.io/TFactSR/
