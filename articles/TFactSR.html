@@ -64,10 +64,11 @@ Transcription Factors Are Regulated</h1>
                         <h4 data-toc-skip class="author">Atsushi
 Fukushima</h4>
             <address class="author_afil">
-      RIKEN Center for Sustainable Resource
-Science<br><a class="author_email" href="mailto:#"></a><a href="mailto:afukushima@gmail.com" class="email">afukushima@gmail.com</a>
+      Kyoto Prefectural
+University<br><a class="author_email" href="mailto:#"></a><a href="mailto:afukushima@gmail.com" class="email">afukushima@gmail.com</a>
       </address>
                   
+            <h4 data-toc-skip class="date">2023-08-19</h4>
       
       
       <div class="hidden name"><code>TFactSR.Rmd</code></div>
@@ -75,10 +76,6 @@ Science<br><a class="author_email" href="mailto:#"></a><a href="mailto:afukushim
     </div>
 
     
-        <div class="abstract">
-      <p class="abstract">Abstract</p>
-      <p>Instructions for the TFactSR package.</p>
-    </div>
     
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
@@ -224,10 +221,10 @@ follows.</p>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">##      TFs   m  n    N k      p.value      e.value       FDR.BH RC</span></span>
 <span><span class="co">## 8  FOXO3  78 18 6838 7 5.499085e-10 1.594735e-08 1.594735e-08  1</span></span>
-<span><span class="co">## 7  FOXO1 161 18 6838 7 9.012711e-08 2.613686e-06 1.306843e-06  0</span></span>
+<span><span class="co">## 7  FOXO1 161 18 6838 7 9.012711e-08 2.613686e-06 1.306843e-06  2</span></span>
 <span><span class="co">## 9  FOXO4   9 18 6838 2 2.330683e-04 6.758980e-03 2.252993e-03  0</span></span>
 <span><span class="co">## 12  IRF9   3 18 6838 1 7.877425e-03 2.284453e-01 5.711133e-02  0</span></span>
-<span><span class="co">## 23 STAT1  61 18 6838 2 1.092615e-02 3.168585e-01 6.329948e-02  0</span></span>
+<span><span class="co">## 23 STAT1  61 18 6838 2 1.092615e-02 3.168585e-01 6.329948e-02  1</span></span>
 <span><span class="co">## 19 SMAD5   5 18 6838 1 1.309644e-02 3.797969e-01 6.329948e-02  0</span></span></code></pre>
 <p>Using the option “TF.col” and “TF.col”, we can specify the target
 column of your catalogue dataset. Carefully you have to choose the
@@ -251,7 +248,14 @@ TF-target relationships as follows.</p>
 <span><span class="co">## 3  AT1G24260 4101 74 18910 0 1.00000000 32.0000000 1.0000000  0</span></span></code></pre>
 </div>
 <div class="section level2">
-<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+<h2 class="unnumbered" id="acknowledgments">Acknowledgments<a class="anchor" aria-label="anchor" href="#acknowledgments"></a>
+</h2>
+<p>We thank the Bio”Pack”thon community for helpful discussions. This
+work was supported by JSPS KAKENHI Grant Numbers 26850024 and
+17K07663.</p>
+</div>
+<div class="section level2">
+<h2 class="unnumbered" id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a>
 </h2>
 <ol style="list-style-type: decimal">
 <li>Essaghir A, Toffalini F, Knoops L, Kallin A, van Helden J, Demoulin
@@ -261,7 +265,8 @@ presence of target gene signatures in microarray gene expression data.
 Acids Res. 2010 Jun 1;38(11):e120</a>.</li>
 <li>Essaghir A, Demoulin JB: A Minimal Connected Network of
 Transcription Factors Regulated in Human Tumors and Its Application to
-the Quest for Universal Cancer Biomarkers. Plos One 7 (6), 2012, <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0039666" class="external-link">e39666</a>.</li>
+the Quest for Universal Cancer Biomarkers. <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0039666" class="external-link">Plos
+One 7 (6), 2012, e39666</a>.</li>
 </ol>
 </div>
 <div class="section level2">
