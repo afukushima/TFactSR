@@ -22,12 +22,15 @@
 ##'
 ##' @author Atsushi Fukushima
 calculateEvalue <- function(df, TFs) {
-  if (!is.data.frame(df)) stop("df must be a data.frame.")
-  if (!is.character(TFs)) stop("TFs must be a character.")
-  if (length(TFs) < 1) stop("The length of TFs must be >0.")
-  e.value <- df$p.value * length(TFs)
-  df.new <- cbind(df, e.value)
-  return(df.new)
+    if (!is.data.frame(df))
+        stop("df must be a data.frame.")
+    if (!is.character(TFs))
+        stop("TFs must be a character.")
+    if (length(TFs) < 1)
+        stop("The length of TFs must be >0.")
+    e.value <- df$p.value * length(TFs)
+    df.new <- cbind(df, e.value)
+    return(df.new)
 }
 
 
@@ -48,10 +51,14 @@ calculateEvalue <- function(df, TFs) {
 ##'
 ##' @author Atsushi Fukushima
 calculateQvalue <- function(df, lambda = seq(0.05, 0.5, 0.01)) {
-  if (!is.data.frame(df)) stop("catalog must be a data.rame.")
-  qobj <- qvalue::qvalue(p = df$p.value, lambda = lambda, pfdr = TRUE)
-  df.new <- cbind(df, q.value=qobj$qvalues)
-  return(df.new)
+    if (!is.data.frame(df))
+        stop("catalog must be a data.rame.")
+    qobj <-
+        qvalue::qvalue(p = df$p.value,
+                       lambda = lambda,
+                       pfdr = TRUE)
+    df.new <- cbind(df, q.value = qobj$qvalues)
+    return(df.new)
 }
 
 
@@ -71,8 +78,9 @@ calculateQvalue <- function(df, lambda = seq(0.05, 0.5, 0.01)) {
 ##' @author Atsushi Fukushima
 ## FDR control (B-H)
 calculateFDRBH <- function(df) {
-  if (!is.data.frame(df)) stop("catalog must be a data.rame.")
-  FDR.BH <- stats::p.adjust(df$p.value, method = "BH")
-  df.new <- cbind(df, FDR.BH)
-  return(df.new)
+    if (!is.data.frame(df))
+        stop("catalog must be a data.rame.")
+    FDR.BH <- stats::p.adjust(df$p.value, method = "BH")
+    df.new <- cbind(df, FDR.BH)
+    return(df.new)
 }
