@@ -79,7 +79,7 @@ $$ RD_{(TF)} = \frac{\#\left\{ Eval(TF) \leq \lambda \right\} \times 100} { \#\l
 
 
 # Prerequisites
-The TFactSR package requires (1) a list of DEGs and (2) a catalogue of interest. For Arabidopsis, we prepared the catalogue based on [AtRegNet](http://arabidopsis.med.ohio-state.edu/) and [ATRM](http://atrm.cbi.pku.edu.cn/). For human data, the package can do the calculation using default settings. 
+The TFactSR package requires (1) a list of DEGs and (2) a catalogue of interest. For Arabidopsis, we prepared the catalogue based on [AtRegNet](https://agris-knowledgebase.org/) and [ATRM](http://atrm.cbi.pku.edu.cn/). For human data, the package can do the calculation using default settings. 
 
 The Supported organisms by the original TFactS are human, rat and mouse genes. As you can see below,  you can perform an enrichment analysis which TFs are regulated if you have a list of DEGs and your catalogue. 
 
@@ -119,7 +119,7 @@ We thank the Bio"Pack"thon community for helpful discussions. This work was supp
 
 # Reference {.unnumbered}
 1. Essaghir A, Toffalini F, Knoops L, Kallin A, van Helden J, Demoulin JB: Transcription factor regulation can be accurately predicted from the presence of target gene signatures in microarray gene expression data. [Nucleic Acids Res. 2010 Jun 1;38(11):e120](https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkq149).
-2. Essaghir A, Demoulin JB: A Minimal Connected Network of Transcription Factors Regulated in Human Tumors and Its Application to the Quest for Universal Cancer Biomarkers. [Plos One 7 (6), 2012, e39666](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0039666).
+2. Essaghir A, Demoulin JB: A Minimal Connected Network of Transcription Factors Regulated in Human Tumors and Its Application to the Quest for Universal Cancer Biomarkers. [Plos One 7 (6), 2012, e39666](https://journals.plos.org:443/plosone/article?id=10.1371/journal.pone.0039666).
 
 
 # Session info {.unnumbered}
