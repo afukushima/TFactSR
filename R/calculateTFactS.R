@@ -11,6 +11,7 @@
 ##' @param lambda2 a user-specified threshold of E-value (default: 0.05)
 ##' @param nRep number of random selections (default: 100)
 ##' @param TF.col the name of the column that contains the TF names
+##' @param TG.col the name of the column that contains the TG names
 ##' @return data.frame
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
 ##' @export
@@ -34,7 +35,8 @@ calculateTFactS <-
             lambda1 = seq(0.05, 0.5, 0.01),
             lambda2 = 0.05,
             nRep = 100,
-            TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.") {
+            TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.",
+            TG.col = "Target.gene..OFFICIAL_GENE_NAME.") {
         if (!is.character(DEGs))
             stop("DEGs must be a character.")
         if (!is.data.frame(catalog))
@@ -51,7 +53,7 @@ calculateTFactS <-
             stop("TF.col must specify one column of the catalogue.")
 
         ## enrichment test
-        df <- calculateEnrichmentTest(DEGs, catalog, TFs, TF.col = TF.col)
+        df <- calculateEnrichmentTest(DEGs, catalog, TFs, TF.col = TF.col, TG.col = TG.col)
         ## calculate E-values
         df <- calculateEvalue(df, TFs)
         ## calculate FDR control by BH

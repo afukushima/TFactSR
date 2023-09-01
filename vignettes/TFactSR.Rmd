@@ -102,19 +102,20 @@ head(res)
 Using the option "TF.col" and "TF.col", we can specify the target column of your catalogue dataset. Carefully you have to choose the TF-target relationships as follows.
 
 ```{R Arabidopsis}
-data(AtCatalog)
+data(ATRM)
 data(GenesUp_SH1H)
 
-d <- extractTFTG(GenesUp_SH1H, AtCatalog,
+d <- extractTFTG(GenesUp_SH1H, ATRM,
                      TF.col = "TF",
                      TG.col = "target.genes")
 
-res <- calculateTFactS(GenesUp_SH1H, AtCatalog, d$TFs, d$all.targets, TF.col = "TF")
+res <- calculateTFactS(GenesUp_SH1H, ATRM, d$TFs, d$all.targets, 
+                       TF.col = "TF", TG.col = "target.genes")
 head(res)
 ```
 
 # Acknowledgments {.unnumbered}
-We thank the Bio"Pack"thon community for helpful discussions. This work was supported by JSPS KAKENHI Grant Numbers 26850024 and 
+We thank the Bio"Pack"athon community for helpful discussions. This work was supported by JSPS KAKENHI Grant Numbers 26850024 and 
 17K07663.
 
 # Reference {.unnumbered}

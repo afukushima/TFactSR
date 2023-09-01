@@ -13,7 +13,8 @@ calculateTFactS(
   lambda1 = seq(0.05, 0.5, 0.01),
   lambda2 = 0.05,
   nRep = 100,
-  TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME."
+  TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.",
+  TG.col = "Target.gene..OFFICIAL_GENE_NAME."
 )
 }
 \arguments{
@@ -34,6 +35,8 @@ calculateTFactS(
 \item{nRep}{number of random selections (default: 100)}
 
 \item{TF.col}{the name of the column that contains the TF names}
+
+\item{TG.col}{the name of the column that contains the TG names}
 }
 \value{
 data.frame

@@ -8,7 +8,8 @@ calculateEnrichmentTest(
   DEGs,
   catalog,
   TFs,
-  TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME."
+  TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.",
+  TG.col = "Target.gene..OFFICIAL_GENE_NAME."
 )
 }
 \arguments{
@@ -19,6 +20,8 @@ calculateEnrichmentTest(
 \item{TFs}{a character vector of transcription factor}
 
 \item{TF.col}{the name of the column that contains the TF names}
+
+\item{TG.col}{the name of the column that contains the TG names}
 }
 \value{
 data.frame

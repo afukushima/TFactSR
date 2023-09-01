@@ -2,7 +2,7 @@ Type: Package
 Package: TFactSR
 Title: Enrichment Approach to Predict Which Transcription Factors are
     Regulated
-Version: 0.99.0
+Version: 0.99.1
 Authors@R:
     person(given = "Atsushi",
            family = "Fukushima",

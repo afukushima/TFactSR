@@ -8,6 +8,7 @@
 ##' @param catalog a data frame of TFactS catalog (ver. 2)
 ##' @param TFs a character vector of transcription factor
 ##' @param TF.col the name of the column that contains the TF names
+##' @param TG.col the name of the column that contains the TG names
 ##' @return data.frame
 ##' @references Essaghir A et al. Nucleic Acids Res. 2010 Jun;38(11):e120.
 ##' @export
@@ -23,7 +24,8 @@
 ##' @author Atsushi Fukushima
 calculateEnrichmentTest <-
     function(DEGs, catalog, TFs,
-            TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.") {
+            TF.col = "TF..OFFICIAL_TF_CODING_GENE_NAME.",
+            TG.col = "Target.gene..OFFICIAL_GENE_NAME.") {
         if (!is.character(DEGs))
             stop("DEGs must be a character.")
         if (!is.data.frame(catalog))
@@ -33,7 +35,7 @@ calculateEnrichmentTest <-
 
         res <- apply(data.frame(TFs), 1, function(i) {
             TF.targets <-
-                as.character(catalog[which(catalog[[TF.col]] == i), 1])
+                as.character(catalog[which(catalog[[TF.col]] == i), TG.col])
             ##' Definition:
             ##' m is the number of target genes annotated for the TF
             ##' under consideration
