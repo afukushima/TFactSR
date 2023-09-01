@@ -76,24 +76,18 @@ NULL
 ##' @author Atsushi Fukushima
 NULL
 
-##' A catalogue of annotated target genes in Arabidopsis thaliana
+##' A catalogue of annotated target genes in Arabidopsis thaliana based on ATRM
 ##'
-##' The original regulatory network datasets were downloaded from AtRegNet
-##' - AGRIS Arabidopsis
-##' (http://arabidopsis.med.ohio-state.edu/moreNetwork.html)
-##' and ATRM (http://atrm.cbi.pku.edu.cn/), respectively. Then we integrated
-##' them based on AGI code.
+##' The original regulatory network datasets were downloaded from
+##' ATRM (http://atrm.cbi.pku.edu.cn/).
 ##'
-##' The catalogues version is 0.0.1.
-##'
-##' @name AtCatalog
+##' @name ATRM
 ##' @docType data
-##' @aliases AtCatalog
-##' @title A list of TF-target genes (TG) in Arabidopsis thaliana.
+##' @aliases ATRM
+##' @title A list of ATRM TF-target genes (TG) in Arabidopsis thaliana.
 ##' @return None
 ##' @keywords datasets
-##' @references Yilmaz A et al. NAR 39:D1118-1122 (2011)
-##' @author Atsushi Fukushima
+##' @references Jin JP et al. Mol Bio Evol 32:1767-1773 (2015)
 NULL
 
 ##' A list of 74 differentially expressed genes (DEGs) from AtGenExpress
